@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quick-sale</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="./css/style.min.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="hero">
+                <div class="search-section">
+                    <div class="search-section-part">
+                        <input class="search-bar" type="text" placeholder="Search By Name/Contact/Address/FileNo/Card Number (Atleast 3 Characters are required)">
+                    <button class="btn btn-success text-white ">Create New User</button>
+                    </div>
+                    <div class="bill-date">
+                        <p class="bill-date-text">Bill date</p>
+                        <div class="bill-date-value">04-02-2023</div>
+                    </div>
+                </div>
+                <div class="services-section">
+                    <div class="service-category">
+                        <div class="select-service btn btn-success text-white">
+                            <span class="service-btn-text">Add Services</span>
+                            <i class="fa-solid fa-plus hover-effect text-white"></i>
+                    </div>
+                    <ul class="service-items">
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text"></span>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="service-category">
+                        <div class="select-product btn btn-success text-white">
+                            <span class="product-btn-text">Add Products</span>
+                            <i class="fa-solid fa-plus hover-effect"></i>
+                    </div>
+                    <ul class="product-items">
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">HTML & CSS</span>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="service-category">
+                        <div class="select-service btn btn-success text-white">
+                            <span class="service-btn-text">Add Membership</span>
+                            <i class="fa-solid fa-plus hover-effect"></i>
+                    </div>
+                    <ul class="service-items">
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">HTML & CSS</span>
+                        </li>
+                        
+                    </ul>
+                    </div>
+                    <div class="service-category">
+                        <div class="select-service btn btn-success text-white">
+                            <span class="service-btn-text">Add Gifts</span>
+                            <i class="fa-solid fa-gift hover-effect"></i>
+                    </div>
+                    <ul class="service-items">
+                        <li class="item">
+                            <span class="checkbox">
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                            <span class="item-text">HTML & CSS</span>
+                        </li>
+                       
+                    </ul>
+                    </div>
+
+
+                </div>
+                <div class="reward-section">
+                    <div class="reward-points">
+                        <p class="reward-points-text text">Reward Points</p>
+                        <div class="select-menu  ">
+                            <div class="select-btn ">
+                                <span class="sBtn-text">Select your option</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                    
+                            <ul class="options">
+                                <li class="option">
+                                    <span class="option-text">reward-1</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">reward-2</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">reward-3</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">reward-4</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">reward-5</span>
+                                </li>
+                            </ul>
+                        </div>
+                
+                    </div>
+                    <div class="ex-charges fill-primary">
+                        <p class="ex-charges text">Ex Charges</p>
+                        <input type="text" class="ex-charges-value fill height">
+                    </div>
+                    <div class="discount fill-primary">
+                        <p class="discount text">Discount</p>
+                        <input type="text" class="dicount-value fill height">
+                    </div>
+                    <div class="dis-type ">
+                        <p class="dis-type text">Dis Type</p>
+                        <div class="percent-select-menu ">
+                            <div class="percent-select-btn">
+                                <span class="percent-text">Percentage %</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>                  
+                            <ul class="percent-options">
+                                <li class="percent-option">
+                                    <span class="percent-option-text">10%</span>
+                                </li>
+                                <li class="percent-option">
+                                    <span class="percent-option-text">20%</span>
+                                </li>
+                                <li class="percent-option">
+                                    <span class="percent-option-text">30%</span>
+                                </li>
+                                <li class="percent-option">
+                                    <span class="percent-option-text">40%</span>
+                                </li>
+                                <li class="percent-option">
+                                    <span class="percent-option-text">50%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gst fill-primary">
+                        <p class="gst text">GST</p>
+                        <input type="text" class="gst-value fill height">
+                    </div>
+                </div>
+                <div class="summary">
+                    <div class="payment-mode">
+                            <div class="payment-options">
+                                <div class="cash payment">Cash</div>
+                                <div class="bank-card payment">Card</div>
+                                <div class="upi payment">Bharatpe</div>
+                            </div>
+                            <div class="adjust-pay">
+                                <p class="adjust-pay-text">Adjust Payments</p>
+                                <input type="text" class="adjust-pay-value fill" placeholder="Adjust Payments">
+                            </div>
+                            <div class="coupon">
+                                <input type="text" class="coupon-value fill" placeholder="Add Coupon">
+                                <button class="btn btn-success text-white">Apply</button>
+                            </div>
+                        
+                          <input type="text" name="" id="" placeholder="Enter Notes" class="notes">
+                            
+                    </div>
+                    <div class="summary-detail">
+                        <table>
+                            <tr>
+                                <td>Sub Total :</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Grand Total :</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td>Paying Now :</td>
+                                <td>300</td>
+                            </tr>
+                            <tr>
+                               
+                                <td>Due Amount :</td>
+                                <td>500</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            <div>
+            </div>
+            </div>
+            <div class="footer-btn">
+                <button class="btn btn-success text-white reset">Reset</button>
+                <button class="btn btn-success text-white generate-bill">Generate Bill</button>
+                <button class="btn btn-success text-white reset">Submit</button>
+            </div>
+         </div>   
+     </div>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="./dropdown.js"></script>
+<script src="./services.js"></script>
+<script src="./products.js"></script>
+<!-- 
+ -->
+<!-- <script src="/create-service.js"></script>
+<script src="/services.js"></script> -->
+<script src="https://kit.fontawesome.com/9f8d5d56bf.js" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
