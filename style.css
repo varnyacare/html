@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(182.38% 208.91% at 12% 10.28%, rgba(187, 38, 73, 0.15) 0%, rgba(167, 58, 84, 0.15) 29.88%, rgba(38, 187, 152, 0.15) 49.75%, rgba(187, 38, 73, 0.15) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , #FFFFFF;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+
+
+}
+
+.heading {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: .12em;
+    color: rgba(38, 187, 152, 0.33);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #926572;
+    cursor: pointer;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+img {
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+li {
+    line-height: 24px;
+
+}
+
+li span {
+    font-weight: 500;
+    color: black;
+    display: block;
+}
+
+.contact {
+    color: #1C0208;
+    font-size: 16px;
+}
+
+.contact span {
+    color: #BB2649;
+    cursor: pointer;
+}
+
+.about {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.fine-print{
+    margin-top: .5em;
+}
+.fine-print a {
+    text-decoration: none;
+    color: gray;
+    opacity: .35;
+}
+
+.fine-print a:hover {
+    color: #000000;
+    opacity: 1;
+}
+
+.border-bottom {
+    width: 134px;
+    height: 5px;
+
+    background: #000000;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 0%;
+
+    opacity: 1;
+}
+
+/* PRIVACY POLICY */
+.header{
+    border-bottom: 1px solid rgba(128, 128, 128, .35);
+}
+.title{
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1em;
+}
+.page h1,h2,h3,p{
+    margin-bottom: 1em;
+}
+
+.page li{
+    list-style:circle !important;
+    margin-bottom: .5em;
+}
+
+.footer{
+    border-top: 1px solid rgba(128, 128, 128, .35); 
+}
