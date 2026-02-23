@@ -126,7 +126,7 @@ function getAdvanceHistory( from_date = null, to_date = null){``
             $('#advance-list').empty()
             for(let i =0; i<response.data.length; i++){
                 console.log(response.data[i]);
-                data += `<tr><td>${response.data[i].item.advance_no}</td><td>${response.data[i].item.date}</td><td>${response.data[i].user.mobile}</td><td>${response.data[i].user.name}</td><td>${response.data[i].item.advance_amount}</td><td><a href="${response.data[i].item.advance_RCPT}"><i class="mdi mdi-download"></i></a></tr>`
+                data += `<tr><td>${response.data[i].item.advance_no}</td><td>${response.data[i].item.date}</td><td>${response.data[i].user.mobile}</td><td>${response.data[i].user.name}</td><td>${response.data[i].item.advance_amount}</td><td><a href="${response.data[i].item.advance_RCPT} "target="_blank" rel="noopener noreferrer" ><i class="mdi mdi-download"></i></a></tr>`
             }
             console.log(data,"data");
             $('#advance-list').append(data);
