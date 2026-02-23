@@ -1,0 +1,289 @@
+<html>
+  <head>
+    <style>
+      
+
+      .table-bordered td,
+      .table-bordered th {
+        border: 1px solid #ddd;
+        padding: 10px;
+        word-break: break-all;
+      }
+
+      
+      .h4-14 h4 {
+        font-size: 12px;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      .img {
+        margin-left: "auto";
+        margin-top: "auto";
+        height: 30px;
+      }
+      
+      .hm-p p {
+        text-align: left;
+        padding: 1px;
+        padding: 5px 4px;
+      }
+     
+      .table-b td,
+      .table-b th {
+        border: 1px solid #ddd;
+      }
+      
+      .hm-p td,
+      .hm-p th {
+        padding: 3px 0px;
+      }
+      .cropped {
+        float: right;
+        margin-bottom: 20px;
+        height: 100px; /* height of container */
+        overflow: hidden;
+      }
+      .cropped img {
+        width: 400px;
+        margin: 8px 0px 0px 80px;
+      }
+      .main-pd-wrapper {
+        box-shadow: 0 0 10px #ddd;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      .table-bordered td,
+      .table-bordered th {
+        border: 1px solid #ddd;
+        padding: 10px;
+        font-size: 14px;
+      }
+    </style> 
+  </head>
+  <body class="body" id="ElementYouWantToConvertToPdf">
+    <section class="main-pd-wrapper" style="width: 800px; margin: auto">
+      <div style="display: table-header-group">
+        <h4 style="text-align: center; margin: 0">
+          <b>Tax Invoice</b>
+        </h4>
+
+        <table style="width: 100%; table-layout: fixed">
+          <tr>
+            <td
+              style="border-left: 1px solid #ddd; border-right: 1px solid #ddd"
+            >
+              <div
+                style="
+                  text-align: center;
+                  margin: auto;
+                  line-height: 1.5;
+                  font-size: 14px;
+                  color: #4a4a4a;
+                "
+              >
+                <!-- <img src="file:///Users/prince/Downloads/logo-icon.svg"></img> / -->
+
+                <p style="font-weight: bold; margin-top: 15px">
+                  GST TIN : 06AAFCD6498P1ZT
+                </p>
+                <p style="font-weight: bold;">
+                  CIN: 06AAFCD6498P1ZT
+                </p>
+                <p style="font-weight: bold">
+                  Mobile :
+                  <a href="tel:018001236477" style="color: #00bb07"
+                    >1800-123-6477</a
+                  >
+                </p>
+                <p style="font-weight: bold">
+                  Email : hello@varnya.care
+                </p>
+              </div>
+            </td>
+            <td
+              align="right"
+              style="
+                text-align: right;
+                padding-left: 50px;
+                line-height: 1.5;
+                color: #323232;
+              "
+            >
+              <div>
+                <h4 style="margin-top: 5px; margin-bottom: 5px">
+                  Bill to
+                </h4>
+                <p>NAME   :- {{ customer["name"]}}</p>
+                <p>MOBILE :- {{customer['mobile']}}</p>
+                <p>Invoice id   :- {{customer['order_id']}}</p> 
+                <p>Invoice date   :- {{customer['order_id']}}</p> 
+                <!-- <p style="font-size: 14px">
+                  Aakriti Rathore<br />
+                  Mobile:
+                  <a href="tel:01241234568" style="color: #00bb07"
+                    >0124-1234568</a
+                  >
+                </p> -->
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table
+        class="table table-bordered h4-14"
+        style="width: 100%; -fs-table-paginate: paginate; margin-top: 15px"
+      >
+        <thead style="display: table-header-group">
+
+          <tr>
+            <th style="width: 50px">#</th>
+            <th style="width: 150px"><h4>Item Name</h4></th>
+            <th style="width: 80px"><h4>QTY</h4></th>
+            <th style="width: 60px"><h4>RATE</h4></th>
+            <th style="width: 80px"> <h4>Discount</h4></th>
+            <th style="width: 120px"><h4>TOTAL Value</h4></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Milkfood Ghee Tp 980Ml</td>
+            <td>40590200</td>
+            <td>100</td>
+            <td>1</td>
+            <td>550.00</td>
+          </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+
+      <table class="hm-p table-bordered" style="width: 100%; margin-top: 30px">
+        <tr>
+          <th style="width: 400px">
+            Total
+          </th>
+          <td style="vertical-align: top; color: #000">
+            <b>97</b>
+          </td>
+        </tr>
+        <tr>
+          <th style="width: 400px">
+            Discount
+           </th>
+          <td style="vertical-align: top; color: #000">
+            <b>97</b>
+          </td>
+        </tr>
+        <tr>
+          <th style="vertical-align: top">GST</th>
+          <td style="vertical-align: top; color: #000">
+            <b> ₹{{total['coupon_amount']}}</b>
+          </td>
+        </tr>
+        <tr>
+          <th style="vertical-align: top">CGST</th>
+          <td style="vertical-align: top">
+            <b>₹{{ total['delivery_charge']}}</b>
+          </td>
+        </tr>
+
+        <tr>
+          <th style="vertical-align: top">SGST</th>
+          <td style="vertical-align: top; color: #000">
+            <b>₹{{total['saving']}}</b>
+          </td>
+        </tr>
+      </table>
+
+      <table class="hm-p table-bordered" style="width: 100%; margin-top: 30px">
+        <tr>
+          <th style="width: 400px">
+            <p>Payment Mode:</p>
+          </th>
+          <td style="width: 100px; border-right: none">
+            <p>&nbsp;CASH</p>
+          </td>
+          <td colspan="5" style="border-left: none"></td>
+        </tr>
+        <tr style="background: #fcbd02">
+          <th>Total Payable amount</th>
+          <td style="width: 70px; text-align: right; border-right: none">
+            <b>1289</b>
+          </td>
+          <td colspan="5" style="border-left: none"></td>
+        </tr>
+      </table>
+
+      <table style="width: 100%" cellspacing="0" cellspadding="0" border="0">
+        <tr>
+          <td>
+            <h4 style="margin: 10px 0">
+              BDAAR Solutions Private Limited. Shop no 11 & 13, Eros city square, Rosewood City Rd, Sector 49, Gurugram, Haryana 122018
+            </h4>
+            <p>
+              This is computer generated invoice and hence signature is not
+              required
+            </p>
+          </td>
+          <!-- <td>
+            <h4 style="margin: 0; text-align: right">
+              Not a Deerika Plus+ member yet?<br />
+              You could have saved 5%
+            </h4>
+          </td> -->
+        </tr>
+      </table>
+    </section>
+  </body>
+  <button id="click">Click</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js">
+  </script>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script type="text/JavaScript">
+    $(document).ready(function() {
+        $('#click').click(function(){
+          $('#ElementYouWantToConvertToPdf').removeAttr('style')
+          const element = document.querySelector('#ElementYouWantToConvertToPdf');
+          const options = {
+            filename: 'output.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            jsPDF: { unit: 'pt', format: 'a4' },
+            margin: 0,
+            html2canvas: { scale: 2 },
+          };
+          // html2pdf().set(options).from(element).save();
+          html2pdf()
+            .set(options)
+            .from(element)
+            .toPdf()
+            .get('pdf')
+            .then(pdfData => {
+              const formData = new FormData();
+              // const file = new File([pdfData], 'dummy.pdf', { type: 'application/pdf' });
+              formData.append('pdf', pdfData.output('blob'), 'test-invoice.pdf');
+              fetch('http://localhost:8000/user/test-upload', {
+                  method: 'POST',
+                  body: formData
+              })
+              .then(response => {
+              // Handle the API response
+              if (response.ok) {
+                  alert('PDF sent successfully');
+                  window.location.reload()
+              } else {
+                  alert('PDF upload failed');
+              }
+              })
+              .catch(error => {
+              // Handle any errors
+                console.error('Error:', error);
+              });
+            })
+        })
+        
+      
+    })
+  </script>
+</html>

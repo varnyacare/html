@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+  <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Invoice</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/logo-icon.png"
+    />
+    <!-- Custom CSS -->
+    <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet" />
+  
+  
+    <!-- For Bootstrap-->
+    
+    <!-- CSS For Print Format -->
+    <link rel="stylesheet" media="print" href="invoiceprint.css">
+    
+    <!-- CSS For Invoice -->
+    <link rel="stylesheet"  href="invoice.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>
+    <style>
+    .table-bordered td,
+      .table-bordered th {
+        border: 1px solid #ddd;
+        padding: 10px;
+        word-break: break-all;
+      }
+
+      
+      .h4-14 h4 {
+        font-size: 12px;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      .img {
+        margin-left: "auto";
+        margin-top: "auto";
+        height: 30px;
+      }
+      
+      .hm-p p {
+        text-align: left;
+        padding: 1px;
+        padding: 5px 4px;
+      }
+     
+      .table-b td,
+      .table-b th {
+        border: 1px solid #ddd;
+      }
+      
+      .hm-p td,
+      .hm-p th {
+        padding: 3px 0px;
+      }
+      .cropped {
+        float: right;
+        margin-bottom: 20px;
+        height: 100px; /* height of container */
+        overflow: hidden;
+      }
+      .cropped img {
+        width: 400px;
+        margin: 8px 0px 0px 80px;
+      }
+      .main-pd-wrapper {
+        box-shadow: 0 0 10px #ddd;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+      }
+      .table-bordered td,
+      .table-bordered th {
+        border: 1px solid #ddd;
+        padding: 10px;
+        font-size: 14px;
+      }
+      .mode{
+        width: 60px;
+        height: 20px;
+      }
+      .spinner-container {
+    position: relative;
+  }
+
+  .spinner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure the spinner is above the table content */
+  }
+
+.disBroder{
+    border: 1px solid lightblue;
+  }
+
+  .spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #ccc;
+    border-top-color: #0694bc; /* Change color as needed */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Animation properties */
+  }
+
+  /* Keyframes for the spinning animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+    </style>
+
+
+</head>
+  <body>
+
+
+   <!-- here starting section to test -->
+    <div class="spinner-container" id="inv-hid" style="display: none">
+                  <div class="spinner-overlay" id="spinnerOverlay" style="display:none">
+                    <div class="spinner"></div>
+                  </div>
+    <div>
+      <button type="button" class="btn-primary" id="windorel" style="margin:1%; margin-left:50%; width:100px; display:none">OK</button>
+    </div>
+      <section class="main-pd-wrapper invoice-print" style="width: 800px; margin: auto">
+        <div style="display: table-header-group">
+          <h4 style="text-align: center; margin: 0">
+            <b>Tax Invoice</b>
+          </h4>
+
+          <table style="width: 100%; table-layout: fixed">
+            <tr>
+              <td
+                style="border-left: 1px solid #ddd; border-right: 1px solid #ddd"
+              >
+                <div
+                  style="
+                    text-align: center;
+                    margin: auto;
+                    line-height: 1.5;
+                    font-size: 14px;
+                    color: #4a4a4a;
+                  "
+                >
+                  <img src="../assets/images/logo-text.png"></img> 
+
+                  <p style="font-weight: bold; margin-top: 15px">
+                    GST TIN : 06AALCB4423C1Z3
+                  </p>
+                  <p style="font-weight: bold;">
+                    CIN: U96020HR2023PTC110055
+                  </p>
+                  <p style="font-weight: bold">
+                    Mobile :
+                    <a href="tel:018001236477" style="color: #00bb07" class="varnyaMobilenumber"
+                      >+91-9667917771</a
+                    >
+                  </p>
+                  <p style="font-weight: bold">
+                    Email : hello@varnya.care
+                  </p>
+                </div>
+              </td>
+              <td
+                align="right"
+                style="
+                  text-align: right;
+                  padding-left: 50px;
+                  line-height: 1.5;
+                  color: #323232;
+                "
+              >
+                <div>
+                  <h4 style="margin-top: 5px; margin-bottom: 5px">
+                    Bill to
+                  </h4>
+                  <p>NAME :- <b class="name"></b></p>
+                  <p>MOBILE :- <b class="mobile"></b></p>
+                  <p>Invoice no. :- <b class="invoice-id"></b></p> 
+                  <p>Invoice date :- <b><?php echo date('d/m/Y'); ?></b></p> 
+                  <!-- <p style="font-size: 14px">
+                    Aakriti Rathore<br />
+                    Mobile:
+                    <a href="tel:01241234568" style="color: #00bb07"
+                      >0124-1234568</a
+                    >
+                  </p> -->
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <table
+          class="table table-bordered h4-14"
+          style="width: 100%; -fs-table-paginate: paginate; margin-top: 15px"
+        >
+          <thead style="display: table-header-group">
+
+            <tr>
+              <th style="width: 50px">#</th>
+              <th style="width: 250px"><h4>Item Name</h4></th>
+              <th style="width: 80px"><h4>QTY</h4></th>
+              <th style="width: 150px"><h4>RATE</h4></th>
+              <th style="width: 100px"> <h4>Discount %</h4></th>
+              <th style="width: 120px"><h4>Total Value</h4></th>
+            </tr>
+          </thead>
+          <tbody class="render-items">
+            
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+
+    <div style="width:100%; display:flex;">
+      <div style="width:500px">
+        <table class="hm-p table-bordered" style="width: 100%; margin-top: 30px">
+          <tr>
+            <th style="width:150px">
+              Total
+            </th>
+            <td style="vertical-align: top; color: #000; width:130px">
+              <b class="totalAmt"></b>
+            </td>
+          </tr>
+          <tr>
+            <th style="width:150px">
+              Reward used
+            </th>
+            <td style="vertical-align: top; color: #000; width:130px">
+              <b class="rewardUsed"></b>
+            </td>
+          </tr>
+          <tr>
+            <th style="width:150px">
+              Total taxable
+            </th>
+            <td style="vertical-align: top; color: #000; width:130px">
+              <b class="ftotal"></b>
+            </td>
+          </tr>
+          
+          <tr>
+            <th style=" width:150px">
+              Discount %
+            </th>
+            <td style="vertical-align: top; color: #000'; width:130px">
+              <b class="discount"></b>
+            </td>
+          </tr>
+          <tr>
+            <th style="vertical-align: top; width:150px">GST 18%</th>
+            <td style="vertical-align: top; color: #000; width:130px">
+              <b class="fgst"> </b>
+            </td>
+          </tr>
+          <tr>
+            <th style="vertical-align: top; width:150px">CGST 9%</th>
+            <td style="vertical-align: top; width:130px">
+              <b class="cgst"></b>
+            </td>
+          </tr>
+
+          <tr>
+            <th style="vertical-align: top; width:150px">SGST 9%</th>
+            <td style="vertical-align: top; color: #000; width:130px">
+              <b class="sgst"></b>
+            </td>
+          </tr>
+        </table>
+    </div>
+    <div style="width: 500px;">
+        <table class="hm-p table-bordered" style="width: 100%; margin-top: 30px; margin-right:10px float:right;">
+          <tr>
+            <th style="vertical-align: top; width:150px">Reward Balance</th>
+            <td style="vertical-align: top; color: #000">
+              <b class="rewardBalance"></b>
+            </td>
+          </tr>
+          <tr>
+            <th style="vertical-align: top; width:150px">Advance Wallet</th>
+            <td style="vertical-align: top; color: #000">
+              <b class="adWallet"></b>
+            </td>
+          </tr>
+      </table>
+    </div>
+    </div>
+        <table class="hm-p table-bordered" style="width: 100%; margin-top: 30px">
+          <tr>
+            <th style="width: 400px">
+              <p>Payment Mode:</p>
+            </th>
+            <td style="width: 400px; border-right: none">
+              <p class="payment-mode">&nbsp;</p>
+            </td>
+            <td colspan="5" style="border-left: none"></td>
+          </tr>
+          <tr style="background: #fcbd02">
+            <th>Total Payable amount</th>
+            <td style="width: 70px; text-align: right; border-right: none">
+              <b class="netPay"></b>
+            </td>
+            <td colspan="5" style="border-left: none"></td>
+          </tr>
+        </table>
+
+        <table style="width: 100%" cellspacing="0" cellspadding="0" border="0">
+          <tr>
+            <td>
+              <h4 style="margin: 10px 0" id="bdaarAddress">
+              </h4>
+              <p>
+                This is computer generated invoice and hence signature is not
+                required
+              </p>
+            </td>
+            <!-- <td>
+              <h4 style="margin: 0; text-align: right">
+                Not a Deerika Plus+ member yet?<br />
+                You could have saved 5%
+              </h4>
+            </td> -->
+          </tr>
+        </table>
+        
+      </section>
+    </div>
+
+    
+    <div
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin5"
+      data-sidebartype="full"
+      data-sidebar-position="absolute"
+      data-header-position="absolute"
+      data-boxed-layout="full"
+    >
+      <?php include 'header.php'; ?>
+      <div id="nextpage1" class="container" style="width: 1050px; margin-left: 322px">
+        <div class="card">
+            <div class="card-header text-center">
+              <h4>INVOICE</h4>
+            </div>
+	     <div class="card-header">
+              <div class="row justify-between">
+                <div id="discountDiv" class="col-6" style="display:none;">
+                  <h4 class="text-center">Discount</h4>
+                  <table class="disBroder" style="width:100%">
+                    <thead class="disBroder">
+                      <tr class="disBroder">
+                        <th class="disBroder">
+                          Reason
+                        </th>
+                        <th class="disBroder">
+                          Discount%
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="DiskTable" class="disBroder">
+                    </tbody>
+                  </table>
+                </div>
+                <!-- <div  class="col-12">
+                  <h4 class="text-center"></h4>
+                </div> -->
+                <div id="membershipDiv" class="col-6" style="display:none;">
+                  <h4 class="text-center">Membership</h4>
+                  <table class="disBroder" style="width:100%">
+                    <thead class="disBroder">
+                      <tr class="disBroder">
+                        <th class="disBroder">
+                          Name
+                        </th>
+                        <th class="disBroder">
+                          Time Period
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="memberTable" class="disBroder">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+	    <div class="card-header" id="commentDiv" style="display:none;">
+              <div class="row " style="justify-content:center;">
+                <div class="col-6" style="border:0.5px solid grey; border-radius:25px;">
+                  <h4 class="text-center" id="commentsText"></h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-header">
+            <button type="button" class="btn "><a href="advance.php">Advance</a></button>
+            </div>
+            <div class="card-body" style="border-color: red; outline: thick solid #080908; outline-width: 1px">
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span style="width:20%" class="input-group-text" >Customer</span>
+                            <input id="cName" type="text" class="form-control" placeholder="Customer"  >
+                        </div>
+            
+                        <div class="input-group form-outline mb-3" id="navbar-search-autocomplete">
+                            <span class="input-group-text" >Number</span>
+                            <input id="userList" list="browsers" type="search" class="form-control search-input" placeholder="Number"  required>
+                            <datalist id="browsers">
+                              
+                            </datalist>
+                            <button type="button" class="btn" id="getUserdetails" style="float:right;" disabled><a href="userDetails.php" target="_blank" >User Details</a></button>
+                        </div>
+            
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Email</span>
+                            <input id="cEmail" type="text" class="form-control" placeholder="Email (Optional)"  >
+                        </div>
+                        <div id="reward" class="form-check">
+                          <input class="form-check-input" type="checkbox" id="check1" name="reward-points" data-val="0" value="0" checked>
+                          <label class="form-check-label rewPoint">0 Reward points</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                      
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Inv. No</span>
+                            <input id="invoiceNumber" type="text" class="form-control" placeholder="Inv. No"  disabled>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Inv. Date</span>
+                            <input type="text" value=<?php echo date('d/m/Y'); ?> class="form-control" placeholder="Inv. Date" disabled >
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >GST No.</span>
+                            <input type="text" class="form-control" value="06AALCB4423C1Z3" disabled >
+                        </div>
+                        <div class="input-group m-3">
+                        <div id="advance" class="form-check">
+                          <input class="form-check-input" type="checkbox" id="check2" name="advance-pay" data-val="0" value="0" />
+                          <label class="form-check-label advance">0 Advance amount</label>
+                    </div>
+                        <div id="advance" class="form-check ms-5">
+                          <input class="form-check-input" type="checkbox" id="happyHours" name="happyHours" data-val="0" value="0" />
+                          <label class="form-check-label">Happy Hours</label>
+                </div>
+                </div>
+                    </div>
+                </div>
+
+                  <!-- Here is the table for service starts from here -->
+                  <table class="table table-bordered">
+                    <thead class="table-success">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Service</th>
+                        <th scope="col" class="text-end">Qty</th>
+                        <th scope="col" class="text-end">Rate</th>
+                        <th scope="col" class="text-end">Discount  %</th>
+                        <th scope="col" class="text-end">Amount</th>
+                        
+                        <th scope="col" class="text-end stylist" style="width:25%">Stylist</th>
+                        <th scope="col" class="NoPrint">                         
+                            <button type="button" class="btn btn-sm btn-success" onclick="BtnAdd()">+</button>
+                        </th>
+
+                      </tr>
+                    </thead>
+                    <tbody id="TBody">
+                      <tr id="TRow" class="d-none">
+                        <th scope="row">1</th>
+                        <td class="search">
+                          <input type="text" class="form-control service" >
+                          <ul class="list-group" style="display:none;">
+
+                          </ul>
+                        </td>
+                        <td class="quantity">
+                          <input type="number" class="form-control text-end qty" name="qty" onchange="Calc(this);">
+                          
+                          <input type="hidden" class="form-control service_id" name="service_id">
+                          <input type="hidden" class="form-control stylist_id" name="stylist_id">
+                        </td>
+                        <td class="price">
+                          <input type="number" class="form-control text-end rate" name="rate"  onchange="Calc(this);">
+                        </td>
+                        <td><input type="number" class="form-control text-end disc" name="disc" value="0" onchange="Calc(this);"></td>
+                        <td>
+                          <input type="number" class="form-control text-end" name="amt" value="0" disabled="">
+                        </td>
+
+                        <td class="stylist-col">
+                          <select name="stylist-data" class="form-select stylist-data" aria-label="Default select">
+                            
+                          </select>
+                        </td>
+                        <td class="NoPrint">
+                          <button type="button" class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- Table for service ends here -->
+
+                  <!-- Here is the table for products starts from here -->
+                  <table class="table table-bordered">
+                    <thead class="table-success">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Products</th>
+                        <th scope="col" class="text-end">Qty</th>
+                        <th scope="col" class="text-end">Rate</th>
+                        <th scope="col" class="text-end">Discount %</th>
+                        <th scope="col" class="text-end">Amount</th>
+                        
+                        <th scope="col" class="text-end stylist" style="width:25%">Stylist</th>
+                        <th scope="col" class="NoPrint">                         
+                            <button type="button" class="btn btn-sm btn-success" onclick="BtnAddProduct()">+</button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="TBodyProduct">
+                      <tr id="TRowProduct" class="d-none-product">
+                        <th scope="row">1</th>
+                        <td class="search-products"><input type="text" class="form-control products" >
+                          <ul class="list-group list-Products" style="display:none;">
+
+                          </ul>
+                        </td>
+                        <td class="quantity">
+                          <input type="number" class="form-control text-end qty" name="qty" onchange="Calc(this);">
+                          
+                          <input type="hidden" class="form-control product_id" name="product_id">
+                          <input type="hidden" class="form-control stylist_id" name="stylist_id">
+                          <input type="hidden" class="form-control category" name="category">
+                        </td>
+                        <td class="price"><input type="number" class="form-control text-end rate" name="rate"  onchange="Calc(this);"></td>
+                        <td><input type="number" class="form-control text-end disc" name="disc" value="0" onchange="Calc(this);"></td>
+                        <td><input type="number" class="form-control text-end" name="amt" value="0" disabled=""></td>
+                        
+                        <td class="stylist-col">
+                          <select name="stylist-data" class="form-select stylist-data" aria-label="Default select">
+                            
+                          </select>
+                        </td>
+                        <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- Table for products ends here -->
+
+
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="row paymode">
+                        <div class="col-3">
+                          <span class="mdi mdi-cash-multiple">&nbsp;Cash</span>
+                          <input type="checkbox" class="form-check-input mode " id="cash-checkbox" name="payment-mode" value="cash">
+                        </div>
+                        <div class="col-3">
+                          <span class="mdi mdi-credit-card">&nbsp;Card</span>
+                          <input type="checkbox" class="form-check-input mode " id="Card-checkbox" name="payment-mode" value="Card">
+                        </div>
+                        <div class="col-3">
+                          <span class="mdi mdi-qrcode-scan">&nbsp;UPI</span>
+                          <input type="checkbox" class="form-check-input mode " id="upi-checkbox" name="payment-mode" value="upi">
+                        </div>
+                        <div class="col-3">
+                          <span class="" id="rewardInput">&nbsp;Reward</span>
+                          <input type="checkbox" class="form-check-input mode points-checkbox" id="rewardAdvance" name="payment-mode" value="points">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row ">
+                        <div class="col-4 cash paymentAmountDiv" style="display:none;">
+                        <span class="mdi mdi-cash-multiple">&nbsp;Cash</span>
+                        <input type="number" class="form-control paymentAmount " id="cash-amount" name="payment-mode" value="0" placeholder="Cash amount">
+                        </div>
+                        <div class="col-4 Card paymentAmountDiv" style="display:none;" >
+                        <span class="mdi mdi-credit-card">&nbsp;Card</span>
+                        <input type="number" class="form-control paymentAmount " id="Card-amount" name="payment-mode" value="0" placeholder="Card amount">
+                        </div>
+                        <div class="col-4 upi paymentAmountDiv" style="display:none;">
+                        <span class="mdi mdi-qrcode-scan">&nbsp;UPI</span>
+                        <input type="number" class="form-control paymentAmount " id="upi-amount" name="payment-mode" value="0" placeholder="Upi amount">
+                      </div>
+                      
+                        <div class="col-4 points paymentAmountDiv" style="display:none;">
+                        <span class="" id="rewardInput">&nbsp;Reward</span>
+                        <input type="number" class="form-control paymentAmount rewardAdvanceNone points-amount" id="rewardValue" onchange="GetTotal()" name="payment-mode" value="0" placeholder="Reward point">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6" style="margin-top:5px;">
+                          <button type="number" class="btn btn-primary" onclick="generatePdfAndSend()">Send Invoice</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="col-8">
+                      <div class="row">
+                        <div class="col-5 gstsection">
+                          <input type="hidden" id="pay-mode">
+                          <div class="input-group mb-3">
+                              <span style="width: 50%;" class="input-group-text" >Discount % &nbsp;</span>
+                              <input type="number" class="form-control text-end" id="discount" name="discount" onchange="Calc(this);" value="0">
+                          </div>
+                          <div class="input-group mb-3">
+                              <span class="input-group-text" >CGST 9% </span>
+                              <input type="number" class="form-control text-end" id="CGST" name="FGST" disabled>
+                          </div>
+                          <div class="input-group mb-3">
+                              <span class="input-group-text" >SGST 9% </span>
+                              <input type="number" class="form-control text-end" id="SGST" name="FGST" disabled>
+                          </div>
+                        </div>
+                        <div class="col-7 totalCalculation">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" >Total</span>
+                                <input type="number" class="form-control text-end" id="FTotal" name="FTotal" disabled="">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" >GST</span>
+                                <input type="number" class="form-control text-end" id="FGST" name="FGST" onchange="GetTotal()" disabled>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span style="width:50%" class="input-group-text" >Net Payable Amount</span>
+                                <input type="number" class="form-control text-end" id="FNet" name="FNet" disabled="">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+   
+    
+
+
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    
+    <script src="../assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+    <script src="../assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!-- Charts js Files -->
+    
+    <script src="../assets/libs/flot/excanvas.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="../dist/js/pages/chart/chart-page-init.js"></script>
+    
+    <!-- quick-sale js -->
+    <script src="../dist/js/dropdown.js"></script>
+    <script src="../dist/js/products.js"></script>
+    <script src="../dist/js/services.js"></script>
+    <script src="../dist/js/search-user.js"></script>
+      <!-- For Invoice  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="invoice.js"></script>
+  </body>
+</html>
+
