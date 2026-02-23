@@ -1,4 +1,4 @@
-const API_URL = "https://api.varnya.care"
+const API_URL = "https://api.amapure.in"
 let userNmae = localStorage.getItem('username')
 let password = localStorage.getItem('password')
 

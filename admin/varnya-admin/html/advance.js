@@ -212,7 +212,7 @@ function generateRCPTAndSend(){
         for (var pair of formData.entries()) {
             console.log(pair[0]+ ', ' + pair[1]); 
         }
-        fetch('https://api.varnya.care/user/advance-payment', {
+        fetch('https://api.amapure.in/user/advance-payment', {
             method: 'POST',
             body: formData
         })

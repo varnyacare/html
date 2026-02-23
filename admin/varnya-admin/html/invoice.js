@@ -741,7 +741,7 @@ function generatePdfAndSend() {
         }
 
         // Send the PDF data and phone number to the server via API request
-        fetch('https://api.varnya.care/user/send-invoice', {
+        fetch('https://api.amapure.in/user/send-invoice', {
             method: 'POST',
             body: formData
         })

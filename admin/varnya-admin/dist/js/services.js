@@ -1,4 +1,4 @@
-const api = "https://api.varnya.care";
+const api = "https://api.amapure.in";
 const servicedata = [];
 function getTotal() {
   var total = servicedata.reduce((pre, c) => {

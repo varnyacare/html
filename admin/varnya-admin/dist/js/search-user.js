@@ -1,5 +1,5 @@
-const serachUserAPI = "https://api.varnya.care";
-const API_URL = "https://api.varnya.care";
+const serachUserAPI = "https://api.amapure.in";
+const API_URL = "https://api.amapure.in";
 var token = localStorage.getItem('auth');
 let currentDate = new Date();
 let memberTable = '';

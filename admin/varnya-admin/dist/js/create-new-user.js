@@ -1,6 +1,6 @@
 
 
-  const newUserApi = "https://api.varnya.care"
+  const newUserApi = "https://api.amapure.in"
 $(function () {
     if (window.location.href.endsWith('/services.php')) {
         $('.create-new').append(`<li><a class="dropdown-item" href="create-new-service.php">Create New</a></li>`);

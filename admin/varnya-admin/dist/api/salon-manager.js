@@ -1,4 +1,4 @@
-const API_URL = "https://api.varnya.care"
+const API_URL = "https://api.amapure.in"
 $(function () {
     if (window.location.href.endsWith('/salon-manager.php')) {
         $('.create-new').append(`<li><a class="dropdown-item" href="create-salon-manager.php">Create New</a></li>`);
