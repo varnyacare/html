@@ -823,7 +823,7 @@ function getMergedProductData(data) {
 }
 
 $(document).ready(function(){
-    const API_URL = "https://api.varnya.care"
+    const API_URL = "https://api.amapure.in"
     var token = localStorage.getItem('auth')
     var salon_id = localStorage.getItem('salon_id')
     $.ajax({
@@ -875,7 +875,7 @@ $(document).ready(function(){
     })
 
     function searchService(value, e){
-        const API_URL = "https://api.varnya.care"
+        const API_URL = "https://api.amapure.in"
         var token = localStorage.getItem('auth')
         // list of service here
         $.ajax({
@@ -928,7 +928,7 @@ $(document).ready(function(){
     })
 
     function searchProducts(value, e){
-        const API_URL = "https://api.varnya.care"
+        const API_URL = "https://api.amapure.in"
         var token = localStorage.getItem('auth')
         // list of service here
         $.ajax({
