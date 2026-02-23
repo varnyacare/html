@@ -1,4 +1,4 @@
-const API_URL = "https://api.varnya.care/admin"
+const API_URL = "https://api.amapure.in/admin"
 $(function () {
     $('#login').click(function(event){
         document.getElementById('spinnerOverlay').style.display = 'flex';
