@@ -83,7 +83,7 @@ function getInvoiceHistory(payment_mode = null, from_date = null, to_date = null
                 total_amount = total_amount + response[i].total_amount
                 totalServiceCost += response[i].service_cost
                 totalgst = totalgst + response[i].gst
-                data += `<tr> <td>${response[i].invoice_no}</td><td>${username}</td><td>${response[i].date}</td><td>${response[i].product_cost}</td><td>${response[i].service_cost}</td><td>${discount}</td><td>${response[i].gst}</td><td>${response[i].total_amount}</td><td>${response[i].payment_mode}</td><td>${is_cancelled}</td><td><a href="${response[i].invoice_url}"><i class="mdi mdi-download"></i></a></td></tr>`;
+                data += `<tr> <td>${response[i].invoice_no}</td><td>${username}</td><td>${response[i].date}</td><td>${response[i].product_cost}</td><td>${response[i].service_cost}</td><td>${discount}</td><td>${response[i].gst}</td><td>${response[i].total_amount}</td><td>${response[i].payment_mode}</td><td>${is_cancelled}</td><td><a href="${response[i].invoice_url}" target="_blank" rel="noopener noreferrer"><i class="mdi mdi-download"></i></a></td></tr>`;
             }
             document.getElementById('spinnerOverlay').style.display = 'none';
             withoutgst = total_amount - totalgst
