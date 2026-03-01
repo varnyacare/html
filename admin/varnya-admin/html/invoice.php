@@ -206,7 +206,7 @@
                   <p>NAME :- <b class="name"></b></p>
                   <p>MOBILE :- <b class="mobile"></b></p>
                   <p>Invoice no. :- <b class="invoice-id"></b></p> 
-                  <p>Invoice date :- <b><?php echo date('d/m/Y'); ?></b></p> 
+                  <p>Invoice date :- <b id="invoiceDatePrint"><?php echo date('d/m/Y'); ?></b></p>
                   <!-- <p style="font-size: 14px">
                     Aakriti Rathore<br />
                     Mobile:
@@ -467,7 +467,9 @@
 
                         <div class="input-group mb-3">
                             <span class="input-group-text" >Inv. Date</span>
-                            <input type="text" value=<?php echo date('d/m/Y'); ?> class="form-control" placeholder="Inv. Date">
+                            <input type="date" id="invoiceDateInput" 
+value="<?php echo date('Y-m-d'); ?>" 
+class="form-control">
                         </div>
 
                         <div class="input-group mb-3">
