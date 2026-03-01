@@ -206,7 +206,7 @@
                   <p>NAME :- <b class="name"></b></p>
                   <p>MOBILE :- <b class="mobile"></b></p>
                   <p>Invoice no. :- <b class="invoice-id"></b></p> 
-                  <p>Invoice date :- <b id="invoiceDatePrint"><?php echo date('d/m/Y'); ?></b></p>
+                  <p>Invoice date :- <b id="invoiceDatePrint"></b></p>
                   <!-- <p style="font-size: 14px">
                     Aakriti Rathore<br />
                     Mobile:
