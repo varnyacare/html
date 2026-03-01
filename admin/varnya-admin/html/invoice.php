@@ -467,7 +467,7 @@
 
                         <div class="input-group mb-3">
                             <span class="input-group-text" >Inv. Date</span>
-                            <input type="text" value=<?php echo date('d/m/Y'); ?> class="form-control" placeholder="Inv. Date" disabled >
+                            <input type="text" value=<?php echo date('d/m/Y'); ?> class="form-control" placeholder="Inv. Date">
                         </div>
 
                         <div class="input-group mb-3">
